@@ -26,6 +26,10 @@ public class PlayerCameraRotation : CinemachineExtension
         {
             if (stage == CinemachineCore.Stage.Aim)
             {
+#if UNITY_EDITOR
+                if (Cursor.lockState != CursorLockMode.Locked) return;
+#endif
+
                 if (startingRotation == null) startingRotation = transform.localRotation.eulerAngles;
 
 #if UNITY_EDITOR
