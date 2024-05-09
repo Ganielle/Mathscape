@@ -9,6 +9,7 @@ using UnityEngine.UI;
 public class PasscodeController : MonoBehaviour
 {
     [SerializeField] private ObjectiveCheckerItem checkerItem;
+    [SerializeField] private GameplaySceneController gameplaySceneController;
 
     [Space]
     [SerializeField] private bool isAnimatorComplete;
@@ -19,6 +20,7 @@ public class PasscodeController : MonoBehaviour
     [ConditionalField("isAnimatorComplete")][SerializeField] private Animator animatorComplete;
     [ConditionalField("isTimelineComplete")][SerializeField] private PlayableDirector timelineComplete;
     //[ConditionalField("isDialogueComplete")][SerializeField]
+    [SerializeField] private Button passcodeCloseBtn;
 
     [Header("PUZZLE OBJECTS")]
     [SerializeField] private string passcodeCode;
@@ -29,7 +31,9 @@ public class PasscodeController : MonoBehaviour
     public void InitializePuzzle()
     {
         passcodeTMP.text = "";
+        passcodeCloseBtn.onClick.AddListener(() => TurnoffPasscode());
         passcodeObj.SetActive(true);
+        gameplaySceneController.DisableMouseLook();
     }
 
     IEnumerator CheckPasscode()
@@ -57,6 +61,7 @@ public class PasscodeController : MonoBehaviour
         else
         {
             passcodeObj.SetActive(false);
+            gameplaySceneController.ActivateMouseLook();
 
             if (isAnimatorComplete)
                 animatorComplete.SetTrigger("unlocked");
@@ -68,9 +73,16 @@ public class PasscodeController : MonoBehaviour
         }
     }
 
-    public void SetCodeOnPanel(string value) => passcodeTMP.text = value;
-
+    public void SetCodeOnPanel(string value) => passcodeTMP.text += value;
     public void DeleteCodeOnPanel() => passcodeTMP.text = "";
+
+    private void TurnoffPasscode()
+    {
+        passcodeObj.SetActive(false);
+        passcodeTMP.text = "";
+        gameplaySceneController.ActivateMouseLook();
+        passcodeCloseBtn.onClick.RemoveAllListeners();
+    }
 
     public void EnterCode()
     {

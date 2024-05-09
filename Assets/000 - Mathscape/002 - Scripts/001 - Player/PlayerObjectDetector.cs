@@ -6,6 +6,7 @@ using UnityEngine;
 public class PlayerObjectDetector : MonoBehaviour
 {
     [SerializeField] private GameplayController gameplayController;
+    [SerializeField] private GameplaySceneController gameplaySceneController;
 
     [Header("AIM")]
     [SerializeField] private float maxDistance;
@@ -48,6 +49,8 @@ public class PlayerObjectDetector : MonoBehaviour
 
     private void InteractWithObject()
     {
+        if (!gameplaySceneController.CanMouseLook) return;
+
         if (!gameplayController.Interact) return;
 
         if (DetectObject() == null) return;

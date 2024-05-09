@@ -6,6 +6,7 @@ using UnityEngine;
 
 public class GameplayController : MonoBehaviour
 {
+    [SerializeField] private GameplaySceneController gameplaySceneController;
     [SerializeField] private bool cursorLocked = true;
 
     [field: Header("DEBUGGER GLOBAL")]
@@ -62,7 +63,7 @@ public class GameplayController : MonoBehaviour
 
     private void OnApplicationFocus(bool hasFocus)
     {
-        SetCursorState(cursorLocked);
+        SetCursorState(gameplaySceneController.CanMouseLook);
     }
 
     private void SetCursorState(bool newState)
