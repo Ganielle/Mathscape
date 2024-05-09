@@ -57,7 +57,11 @@ public class PlayerObjectDetector : MonoBehaviour
 
         if (DetectObject().tag == "Passcode")
         {
-            DetectObject().GetComponent<PasscodeController>().InitializePuzzle();   
+            DetectObject().GetComponent<PasscodeController>().Initialize();   
+        }
+        else if (DetectObject().tag == "NoteItem")
+        {
+            DetectObject().GetComponent<NoteItemController>().Initialize();
         }
     }
 

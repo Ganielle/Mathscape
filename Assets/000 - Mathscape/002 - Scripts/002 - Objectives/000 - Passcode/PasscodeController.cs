@@ -28,9 +28,19 @@ public class PasscodeController : MonoBehaviour
     [SerializeField] private TMP_InputField passcodeTMP;
     [SerializeField] private List<Button> buttonList;
 
-    public void InitializePuzzle()
+    //  ==============================
+
+    Coroutine enterCodeCoroutine;
+
+    //  ==============================
+
+    public void Initialize()
     {
         passcodeTMP.text = "";
+
+        foreach (Button btn in buttonList)
+            btn.interactable = true;
+
         passcodeCloseBtn.onClick.AddListener(() => TurnoffPasscode());
         passcodeObj.SetActive(true);
         gameplaySceneController.DisableMouseLook();
@@ -78,6 +88,7 @@ public class PasscodeController : MonoBehaviour
 
     private void TurnoffPasscode()
     {
+        StopCoroutine(enterCodeCoroutine);
         passcodeObj.SetActive(false);
         passcodeTMP.text = "";
         gameplaySceneController.ActivateMouseLook();
@@ -86,6 +97,6 @@ public class PasscodeController : MonoBehaviour
 
     public void EnterCode()
     {
-        StartCoroutine(CheckPasscode());
+        enterCodeCoroutine = StartCoroutine(CheckPasscode());
     }
 }
