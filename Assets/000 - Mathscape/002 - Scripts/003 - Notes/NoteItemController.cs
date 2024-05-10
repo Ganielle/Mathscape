@@ -6,6 +6,9 @@ using UnityEngine.UI;
 
 public class NoteItemController : MonoBehaviour
 {
+    [SerializeField] private GameplaySceneController gameplaySceneController;
+
+    [Space]
     [SerializeField] private GameObject noteObj;
     [SerializeField] private TextMeshProUGUI titleTMP;
     [SerializeField] private TextMeshProUGUI descriptionTMP;
@@ -21,6 +24,7 @@ public class NoteItemController : MonoBehaviour
         descriptionTMP.text = descriptionContent;
         closeBtn.onClick.AddListener(() => CloseNote());
         noteObj.SetActive(true);
+        gameplaySceneController.DisableMouseLook();
     }
 
     private void CloseNote()
@@ -29,5 +33,6 @@ public class NoteItemController : MonoBehaviour
         titleTMP.text = "";
         descriptionTMP.text = "";
         closeBtn.onClick.RemoveAllListeners();
+        gameplaySceneController.ActivateMouseLook();
     }
 }

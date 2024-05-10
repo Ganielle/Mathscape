@@ -63,6 +63,10 @@ public class PlayerObjectDetector : MonoBehaviour
         {
             DetectObject().GetComponent<NoteItemController>().Initialize();
         }
+        else if (DetectObject().tag == "DialogueItem")
+        {
+            DetectObject().GetComponent<DialogueController>().Initialize();
+        }
     }
 
     public GameObject DetectObject()

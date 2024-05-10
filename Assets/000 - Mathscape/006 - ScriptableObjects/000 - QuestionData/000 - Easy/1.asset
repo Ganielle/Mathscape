@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eea998eedcd3f0740a19f3c3fd60f457, type: 3}
+  m_Name: 1
+  m_EditorClassIdentifier: 
+  <Question>k__BackingField: "John wants to purchase a home that costs 300,000. He
+    plans to take a 3-year mortgage loan with an annual interest rate of 5%. What
+    will be his monthly payments? Use the first-four numbers on your answer as the
+    code.\n\nGiven: \r\nP= 300, 000\r\ni= 0.05\r\nr=  =  = 0.00416\r\nyear = 3 years\r\nn=
+    mt = (12)(3) = 36\r\nM=?"
+  <Hint>k__BackingField: 
+  <Answer>k__BackingField: 8990

@@ -88,7 +88,9 @@ public class PasscodeController : MonoBehaviour
 
     private void TurnoffPasscode()
     {
-        StopCoroutine(enterCodeCoroutine);
+        if (enterCodeCoroutine != null)
+            StopCoroutine(enterCodeCoroutine);
+
         passcodeObj.SetActive(false);
         passcodeTMP.text = "";
         gameplaySceneController.ActivateMouseLook();
