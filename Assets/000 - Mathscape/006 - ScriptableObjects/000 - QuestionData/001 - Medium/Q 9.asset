@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eea998eedcd3f0740a19f3c3fd60f457, type: 3}
+  m_Name: Q 9
+  m_EditorClassIdentifier: 
+  <Question>k__BackingField: 'Given function: ( f(x) = [log2(x + 3)]. Find the x-intercept.
+    Type the number 3 times as your code. (ex: answer=-1, code=111)'
+  <Answer>k__BackingField: 222
+  <PictureHint>k__BackingField: 0
+  <HintImg>k__BackingField: {fileID: 0}
+  <Hint>k__BackingField: 'To find the x-intercept, set y = 0 and solve for x:
+
+    [log2x
+    + 3) = 0 ]
+
+    [ x + 3 = 20]'

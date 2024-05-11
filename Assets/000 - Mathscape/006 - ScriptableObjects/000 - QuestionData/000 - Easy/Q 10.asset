@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eea998eedcd3f0740a19f3c3fd60f457, type: 3}
+  m_Name: Q 10
+  m_EditorClassIdentifier: 
+  <Question>k__BackingField: "Company XYZ issued 1,000 shares of common stock. If
+    an investor purchases 100 shares at 500 per share, and sell it the next year
+    for 800 per share. What is the investor\u2019s total gain? Use the first 4 digits
+    as your code.\n\r\nGiven:\r\nNumber of shares: 1000\r\nInitial stock price: 500
+    per share\r\nFinal price: 800 per share"
+  <Answer>k__BackingField: 3000
+  <PictureHint>k__BackingField: 0
+  <HintImg>k__BackingField: {fileID: 0}
+  <Hint>k__BackingField: "Total initial investment= Initial stock price x Number
+    of shares\r\nTotal initial investment= 500 x 1000 \r\nTotal initial investment=
+    500, 000\r\nFinal value= Final price x Number of shares\r\nFinal value= 800 x
+    1000\r\nFinal value= 800, 000\r\nTotal Gain = Final value - Total Initial Investment\r\nTotal
+    Gain = 800, 000 \u2013 500,000"

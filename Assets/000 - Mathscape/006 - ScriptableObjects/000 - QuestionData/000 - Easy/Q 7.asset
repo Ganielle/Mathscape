@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eea998eedcd3f0740a19f3c3fd60f457, type: 3}
+  m_Name: Q 7
+  m_EditorClassIdentifier: 
+  <Question>k__BackingField: "A consumer takes out a loan for 20,000 with an annual
+    interest rate of 8% and a 3-year repayment period. If the consumer pays 700 per
+    month, how much interest will they pay in total over the 3 years?\r\nGiven: \r\nYears
+    = 3 years \r\nP=20,000\r\nMonthly payment = 700\r\ni=?"
+  <Answer>k__BackingField: 5200
+  <PictureHint>k__BackingField: 0
+  <HintImg>k__BackingField: {fileID: 0}
+  <Hint>k__BackingField: "Total amount of interest = Total amount \u2013 amount of
+    mortgage\r\nTotal amount of interest = (monthly payment X months X year) \u2013
+    amount of mortgage\r\nTotal amount of interest = [(700.00) (12 months) (3 years)]
+    \u2013 20, 000"

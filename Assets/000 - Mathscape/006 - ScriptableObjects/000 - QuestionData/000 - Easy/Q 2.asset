@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eea998eedcd3f0740a19f3c3fd60f457, type: 3}
+  m_Name: Q 2
+  m_EditorClassIdentifier: 
+  <Question>k__BackingField: "Samantha took a business loan of 50,000 at an annual
+    interest rate of 4% to be paid back in 5 years. If her monthly payment is 920.00,
+    what is the total interest paid over the loan term?\r\nGiven: \r\nYears = 5 years
+    \r\nP=50,000\r\ni=?"
+  <Answer>k__BackingField: 5200
+  <PictureHint>k__BackingField: 0
+  <HintImg>k__BackingField: {fileID: 0}
+  <Hint>k__BackingField: "Total amount of interest = Total amount \u2013 amount of
+    mortgage\r\nTotal amount of interest = (monthly payment X months X year) \u2013
+    amount of mortgage\r\nTotal amount of interest = [(920.00) (12 months) (5 years)]
+    \u2013 50, 000"

@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eea998eedcd3f0740a19f3c3fd60f457, type: 3}
+  m_Name: Q 3
+  m_EditorClassIdentifier: 
+  <Question>k__BackingField: 'A company borrows 1,000,000 to expand its business.
+    The loan is to be amortized over 10 years with annual payments. If the interest
+    rate is 6% per year, what will be the monthly payments? Use the first-four numbers
+    on your answer.
+
+    Given:
+
+    P = 1000000
+
+    i= 0.06
+
+    r= r12 / 12
+    = 0.06 / 12  = 0.005
+
+    t= 10 years
+
+    mt=10x12
+
+    mt=120
+
+    M=?'
+  <Answer>k__BackingField: 5014
+  <PictureHint>k__BackingField: 1
+  <HintImg>k__BackingField: {fileID: 21300000, guid: dff88a58c3bfe7740926961be24ef8af,
+    type: 3}
+  <Hint>k__BackingField: 

@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eea998eedcd3f0740a19f3c3fd60f457, type: 3}
+  m_Name: Q 5
+  m_EditorClassIdentifier: 
+  <Question>k__BackingField: 'Enzo wants to save up for a vacation in 5 years. He
+    decides to invest $1,000 every year in an annuity that earns an annual interest
+    rate of 4%. How much money will John have at the end of 5 years. Use the first
+    four numbers as your code.
+
+    Answer: 541.63
+
+    Given:
+
+    R=1,000                         
+    R= 0.04
+
+    T=5 years                          N= 5'
+  <Answer>k__BackingField: 5416
+  <PictureHint>k__BackingField: 1
+  <HintImg>k__BackingField: {fileID: 21300000, guid: b93611ff27c2b724a8744141096a8e82,
+    type: 3}
+  <Hint>k__BackingField: 

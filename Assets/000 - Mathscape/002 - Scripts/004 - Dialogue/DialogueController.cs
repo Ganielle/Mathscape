@@ -12,6 +12,7 @@ public class DialogueController : MonoBehaviour
 
     [Space]
     [SerializeField] private GameObject dialogueObj;
+    [SerializeField] private GameObject gameplayUIObj;
     [SerializeField] private TextMeshProUGUI characterNameTMP;
     [SerializeField] private TextMeshProUGUI dialogueTMP;
     [SerializeField] private Button nextBtn;
@@ -34,6 +35,7 @@ public class DialogueController : MonoBehaviour
     public void Initialize()
     {
         nextBtn.onClick.AddListener(() => NextDialogueBtn());
+        gameplayUIObj.SetActive(false);
         dialogueObj.SetActive(true);
         gameplaySceneController.DisableMouseLook();
         StartCoroutine(ShowDialogue());
@@ -76,6 +78,7 @@ public class DialogueController : MonoBehaviour
         if (currentDialogueIndex >= dialogueSequence.Count - 1)
         {
             dialogueObj.SetActive(false);
+            gameplayUIObj.SetActive(true);
             characterNameTMP.text = "";
             dialogueTMP.text = "";
             nextBtn.onClick.RemoveAllListeners();

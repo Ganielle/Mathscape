@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eea998eedcd3f0740a19f3c3fd60f457, type: 3}
+  m_Name: Q 9
+  m_EditorClassIdentifier: 
+  <Question>k__BackingField: "A bond with a face value of 100000 is issued with an
+    annual coupon rate of 5%. If the bond pays interest semi-annually, what is the
+    total interest earned after 5 years? Use the first four numbers as your code.\n\r\nGiven:
+    \r\nBond value= 100 000\r\nannual coupon rate = 0.05\r\ntime =5 years(2)= 10"
+  <Answer>k__BackingField: 5000
+  <PictureHint>k__BackingField: 0
+  <HintImg>k__BackingField: {fileID: 0}
+  <Hint>k__BackingField: 'Annual coupon payment = Bond value x coupon rate
+
+    Annual
+    coupon payment = 100, 000 x 0.05
+
+    Annual coupon payment = 5000
+
+    Multiply
+    to the time period.'

@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eea998eedcd3f0740a19f3c3fd60f457, type: 3}
+  m_Name: Q 1
+  m_EditorClassIdentifier: 
+  <Question>k__BackingField: "Suppose Mrs. Remoto would like to save P3, 000 every
+    month in a fund that gives 9% compounded monthly. How much is the amount or the
+    future value of her savings after 6 months. Use the first 4 digits of your answer
+    as the code.\r\nSolution: \r\nGiven: \r\nP = 3,000\r\nr = 0.09\r\nt = 6 months/
+    \xBD year\r\nm = 12\r\nn = mt = 12(\xBD) = 6\r\nFuture value=?"
+  <Answer>k__BackingField: 2257
+  <PictureHint>k__BackingField: 1
+  <HintImg>k__BackingField: {fileID: 21300000, guid: 5bf26321e7418214b89b50445eccf7f6,
+    type: 3}
+  <Hint>k__BackingField: 

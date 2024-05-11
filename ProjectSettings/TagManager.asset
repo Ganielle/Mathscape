@@ -8,6 +8,7 @@ TagManager:
   - PickupItem
   - DialogueItem
   - NoteItem
+  - QuestionItem
   layers:
   - Default
   - TransparentFX

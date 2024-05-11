@@ -10,6 +10,7 @@ public class PasscodeController : MonoBehaviour
 {
     [SerializeField] private ObjectiveCheckerItem checkerItem;
     [SerializeField] private GameplaySceneController gameplaySceneController;
+    [SerializeField] private GameObject gameplayUIObj;
 
     [Space]
     [SerializeField] private bool isAnimatorComplete;
@@ -42,6 +43,7 @@ public class PasscodeController : MonoBehaviour
             btn.interactable = true;
 
         passcodeCloseBtn.onClick.AddListener(() => TurnoffPasscode());
+        gameplayUIObj.SetActive(false);
         passcodeObj.SetActive(true);
         gameplaySceneController.DisableMouseLook();
     }
@@ -92,6 +94,7 @@ public class PasscodeController : MonoBehaviour
             StopCoroutine(enterCodeCoroutine);
 
         passcodeObj.SetActive(false);
+        gameplayUIObj.SetActive(true);
         passcodeTMP.text = "";
         gameplaySceneController.ActivateMouseLook();
         passcodeCloseBtn.onClick.RemoveAllListeners();
