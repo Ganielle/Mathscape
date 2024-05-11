@@ -65,6 +65,11 @@ public class QuestionController : MonoBehaviour
         hintTMP.gameObject.SetActive(tempQuesiton.PictureHint ? false : true);
     }
 
+    private void CheckQuestion()
+    {
+
+    }
+
     private void CloseQuestion()
     {
         tempQuesiton = null;
