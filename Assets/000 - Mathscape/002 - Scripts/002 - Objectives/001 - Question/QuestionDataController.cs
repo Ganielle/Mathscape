@@ -1,4 +1,5 @@
 using MyBox;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -21,11 +22,13 @@ public class QuestionDataController : MonoBehaviour
         StartCoroutine(GenerateQuestions());
     }
 
-    public IEnumerator GenerateQuestions()
+    public IEnumerator GenerateQuestions(Action action = null)
     {
         tempQuestions = easyQuestions;
 
         yield return StartCoroutine(Shuffler.Shuffle(tempQuestions));
+
+        action?.Invoke();
     }
 }
 

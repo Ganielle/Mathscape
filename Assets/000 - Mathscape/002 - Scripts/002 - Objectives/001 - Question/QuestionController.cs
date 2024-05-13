@@ -24,6 +24,7 @@ public class QuestionController : MonoBehaviour
     [Header("MAIN")]
     [SerializeField] private GameObject mainObj;
     [SerializeField] private TextMeshProUGUI questionTMP;
+    [SerializeField] private TextMeshProUGUI retriesLeftTMP;
     [SerializeField] private TMP_InputField answerTMP;
     [SerializeField] private Button checkAnswerBtn;
     [SerializeField] private Button hintBtn;
@@ -37,13 +38,23 @@ public class QuestionController : MonoBehaviour
     [Header("DEBUGGER")]
     [ReadOnly][SerializeField] private int questionIndex;
     [ReadOnly][SerializeField] private QuestionData tempQuesiton;
+    [ReadOnly][SerializeField] private int retriesLeft;
+
+    private void Awake()
+    {
+        retriesLeft = 3;
+        retriesLeftTMP.text = retriesLeft.ToString();
+    }
 
     public void Initialize()
     {
         gameplaySceneController.DisableMouseLook();
-        ReInitializeQuestionData();
+
+        if (tempQuesiton == null)
+            ReInitializeQuestionData();
 
         closeBtn.onClick.AddListener(() => CloseQuestion());
+        checkAnswerBtn.onClick.AddListener(() => CheckQuestion());
 
         gameplayUIObj.SetActive(false);
         mainObj.SetActive(true);
@@ -67,7 +78,40 @@ public class QuestionController : MonoBehaviour
 
     private void CheckQuestion()
     {
+        if (answerTMP.text == tempQuesiton.Answer)
+        {
+            objectiveChecker.IsDone = true;
 
+            if (isAnimatorEnd)
+                animator.SetTrigger("open");
+
+            CloseQuestion();
+        }
+        else
+        {
+            if (retriesLeft <= 0)
+            {
+                hintBtn.interactable = false;
+                checkAnswerBtn.interactable = false;
+                closeBtn.interactable = false;
+
+                StartCoroutine(questionDataController.GenerateQuestions(() =>
+                {
+                    retriesLeft = 3;
+                    retriesLeftTMP.text = retriesLeft.ToString();
+
+                    ReInitializeQuestionData();
+
+                    hintBtn.interactable = true;
+                    checkAnswerBtn.interactable = true;
+                    closeBtn.interactable = true;
+                }));
+                return;
+            }
+
+            retriesLeft--;
+            retriesLeftTMP.text = retriesLeft.ToString();
+        }
     }
 
     private void CloseQuestion()
@@ -90,5 +134,6 @@ public class QuestionController : MonoBehaviour
         gameplaySceneController.ActivateMouseLook();
 
         closeBtn.onClick.RemoveAllListeners();
+        checkAnswerBtn.onClick.RemoveAllListeners();
     }
 }

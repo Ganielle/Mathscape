@@ -7,6 +7,7 @@ public class PlayerObjectDetector : MonoBehaviour
 {
     [SerializeField] private GameplayController gameplayController;
     [SerializeField] private GameplaySceneController gameplaySceneController;
+    [SerializeField] private PlayerInventory playerInventory;
 
     [Header("AIM")]
     [SerializeField] private float maxDistance;
@@ -71,6 +72,17 @@ public class PlayerObjectDetector : MonoBehaviour
         {
             DetectObject().GetComponent<QuestionController>().Initialize();
         }
+        else if (DetectObject().tag == "PickupItem")
+        {
+            playerInventory.AddKeyItem(DetectObject().GetComponent<KeyController>().ItemIndex);
+            DetectObject().GetComponent<KeyController>().Initialize();
+        }
+        else if (DetectObject().tag == "Objective")
+        {
+            DetectObject().GetComponent<GoalController>().Initialize(playerInventory.KeyItems, playerInventory.RemoveAllItemsOnInventoryKey);
+        }
+
+        gameplayController.StopInteract();
     }
 
     public GameObject DetectObject()
