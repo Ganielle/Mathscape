@@ -76,7 +76,7 @@ public class PasscodeController : MonoBehaviour
             gameplaySceneController.ActivateMouseLook();
 
             if (isAnimatorComplete)
-                animatorComplete.SetTrigger("unlocked");
+                animatorComplete.SetTrigger("open");
 
             else if (isTimelineComplete)
                 timelineComplete.Play();

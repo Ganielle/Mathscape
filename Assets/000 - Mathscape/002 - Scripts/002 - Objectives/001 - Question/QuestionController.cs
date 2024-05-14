@@ -12,6 +12,7 @@ public class QuestionController : MonoBehaviour
     [SerializeField] private ObjectiveCheckerItem objectiveChecker;
     [SerializeField] private GameplaySceneController gameplaySceneController;
     [SerializeField] private GameObject gameplayUIObj;
+    [SerializeField] private bool deactivateObjOnCorrect;
 
     [Header("OBJECTIVE")]
     [SerializeField] private bool isAnimatorEnd;
@@ -86,6 +87,9 @@ public class QuestionController : MonoBehaviour
                 animator.SetTrigger("open");
 
             CloseQuestion();
+
+            if (deactivateObjOnCorrect)
+                gameObject.SetActive(false);
         }
         else
         {
