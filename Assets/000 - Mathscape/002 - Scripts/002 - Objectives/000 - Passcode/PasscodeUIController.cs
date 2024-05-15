@@ -1,18 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class PasscodeUIController : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField] private TMP_InputField passcodeTMP;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public void SetCodeOnPanel(string value) => passcodeTMP.text += value;
+    public void DeleteCodeOnPanel() => passcodeTMP.text = "";
 }

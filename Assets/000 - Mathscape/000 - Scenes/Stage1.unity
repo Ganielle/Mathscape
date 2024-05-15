@@ -1942,8 +1942,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: PasscodeController, Assembly-CSharp
+      - m_Target: {fileID: 1384666439}
+        m_TargetAssemblyTypeName: PasscodeUIController, Assembly-CSharp
         m_MethodName: SetCodeOnPanel
         m_Mode: 5
         m_Arguments:
@@ -4777,8 +4777,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: PasscodeController, Assembly-CSharp
+      - m_Target: {fileID: 1384666439}
+        m_TargetAssemblyTypeName: PasscodeUIController, Assembly-CSharp
         m_MethodName: SetCodeOnPanel
         m_Mode: 5
         m_Arguments:
@@ -6809,7 +6809,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6593802, guid: 9c11588fb683e564b87b9fe92d39b707, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6593802, guid: 9c11588fb683e564b87b9fe92d39b707, type: 3}
       propertyPath: m_Center.x
@@ -9843,8 +9843,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: PasscodeController, Assembly-CSharp
+      - m_Target: {fileID: 1384666439}
+        m_TargetAssemblyTypeName: PasscodeUIController, Assembly-CSharp
         m_MethodName: SetCodeOnPanel
         m_Mode: 5
         m_Arguments:
@@ -9976,8 +9976,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: PasscodeController, Assembly-CSharp
+      - m_Target: {fileID: 1384666439}
+        m_TargetAssemblyTypeName: PasscodeUIController, Assembly-CSharp
         m_MethodName: SetCodeOnPanel
         m_Mode: 5
         m_Arguments:
@@ -10451,8 +10451,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: PasscodeController, Assembly-CSharp
+      - m_Target: {fileID: 1384666439}
+        m_TargetAssemblyTypeName: PasscodeUIController, Assembly-CSharp
         m_MethodName: SetCodeOnPanel
         m_Mode: 5
         m_Arguments:
@@ -13331,8 +13331,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: PasscodeController, Assembly-CSharp
+      - m_Target: {fileID: 1384666439}
+        m_TargetAssemblyTypeName: PasscodeUIController, Assembly-CSharp
         m_MethodName: DeleteCodeOnPanel
         m_Mode: 1
         m_Arguments:
@@ -13398,7 +13398,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &698274925
 Transform:
   m_ObjectHideFlags: 0
@@ -14224,8 +14224,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: PasscodeController, Assembly-CSharp
+      - m_Target: {fileID: 1384666439}
+        m_TargetAssemblyTypeName: PasscodeUIController, Assembly-CSharp
         m_MethodName: SetCodeOnPanel
         m_Mode: 5
         m_Arguments:
@@ -19252,8 +19252,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: PasscodeController, Assembly-CSharp
+      - m_Target: {fileID: 1384666439}
+        m_TargetAssemblyTypeName: PasscodeUIController, Assembly-CSharp
         m_MethodName: SetCodeOnPanel
         m_Mode: 5
         m_Arguments:
@@ -20945,7 +20945,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1123435676
 Transform:
   m_ObjectHideFlags: 0
@@ -23348,6 +23348,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: DoorGate_Wooden_Right
       objectReference: {fileID: 0}
+    - target: {fileID: 7750370834963051906, guid: b7ed1f58ec447ad4fb0c93a62eb4c4b6,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -23760,7 +23765,7 @@ MonoBehaviour:
   gameplayController: {fileID: 741326347}
   gameplaySceneController: {fileID: 741326348}
   playerInventory: {fileID: 1286206986}
-  maxDistance: 2
+  maxDistance: 3
   aimLayerMask:
     serializedVersion: 2
     m_Bits: 1792
@@ -25442,6 +25447,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1384666436}
   - component: {fileID: 1384666438}
+  - component: {fileID: 1384666439}
   - component: {fileID: 1384666437}
   m_Layer: 5
   m_Name: PasscodePanel
@@ -25508,6 +25514,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1384666435}
   m_CullTransparentMesh: 1
+--- !u!114 &1384666439
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1384666435}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb2ff465cfb1927488c06d51fcc3b372, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  passcodeTMP: {fileID: 1777983483}
 --- !u!1001 &1389126893
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -26854,8 +26873,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: PasscodeController, Assembly-CSharp
+      - m_Target: {fileID: 1384666439}
+        m_TargetAssemblyTypeName: PasscodeUIController, Assembly-CSharp
         m_MethodName: SetCodeOnPanel
         m_Mode: 5
         m_Arguments:
@@ -27643,8 +27662,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gemObjectives:
   - {fileID: 866719515}
-  - {fileID: 2077040855}
-  - {fileID: 1824767419}
   endPlayables: {fileID: 1506544099}
   dialogueController: {fileID: 1506544095}
   objectiveCheckerItem: {fileID: 1506544097}
@@ -27862,8 +27879,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: PasscodeController, Assembly-CSharp
+      - m_Target: {fileID: 1384666439}
+        m_TargetAssemblyTypeName: PasscodeUIController, Assembly-CSharp
         m_MethodName: SetCodeOnPanel
         m_Mode: 5
         m_Arguments:
@@ -32163,8 +32180,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1816889526}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: 1.236, y: 0, z: -0.5710001}
   m_LocalScale: {x: 0.85858, y: 0.85858, z: 0.85858}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -32521,37 +32538,37 @@ MonoBehaviour:
   titleContent: 
   descriptionContent: 'Within the bound wisdom of ink and page,
 
-    
 
-    Secrets
-    are hidden, guiding your way.
 
-    
+    Secrets are
+    hidden, guiding your way.
+
+
 
     Look to the spines where stories reside,
 
-    
+
 
     Numbers
     and letters will be your guide.
 
-    
 
-    The tales hold whispers, a path
-    to unfold,
 
-    
+    The tales hold whispers, a path to unfold,
 
-    Where shadows and chapters reveal what they hold.
 
-    
 
-    Seek
-    the ancient and the new,
+    Where
+    shadows and chapters reveal what they hold.
 
-    
 
-    The key to freedom lies within the view.'
+
+    Seek the ancient and the new,
+
+
+
+    The
+    key to freedom lies within the view.'
 --- !u!1001 &1832696270
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -34474,8 +34491,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: PasscodeController, Assembly-CSharp
+      - m_Target: {fileID: 1384666439}
+        m_TargetAssemblyTypeName: PasscodeUIController, Assembly-CSharp
         m_MethodName: SetCodeOnPanel
         m_Mode: 5
         m_Arguments:
@@ -34923,9 +34940,10 @@ GameObject:
   - component: {fileID: 1948921042}
   - component: {fileID: 1948921041}
   - component: {fileID: 1948921039}
+  - component: {fileID: 1948921043}
   m_Layer: 10
   m_Name: ChestV1_Top
-  m_TagString: Untagged
+  m_TagString: Passcode
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -35017,7 +35035,9 @@ MonoBehaviour:
   isDialogueComplete: 0
   animatorComplete: {fileID: 840411160}
   timelineComplete: {fileID: 0}
+  objectiveObj: {fileID: 324013298}
   passcodeCloseBtn: {fileID: 412958596}
+  passcodeEnterBtn: {fileID: 2028322790}
   passcodeCode: 252107
   passcodeObj: {fileID: 1384666435}
   passcodeTMP: {fileID: 1777983483}
@@ -35047,6 +35067,28 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <IsDone>k__BackingField: 0
+--- !u!64 &1948921043
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1948921037}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -2283848866657765090, guid: 389145416c3991c4fa052f7911e54332, type: 3}
 --- !u!1001 &1958264007
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -36411,19 +36453,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2028322791}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: PasscodeController, Assembly-CSharp
-        m_MethodName: EnterCode
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &2028322791
 MonoBehaviour:
   m_ObjectHideFlags: 0

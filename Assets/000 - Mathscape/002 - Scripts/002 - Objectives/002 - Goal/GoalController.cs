@@ -35,7 +35,7 @@ public class GoalController : MonoBehaviour
                 gemObjectives[gemObjects[a] - 1].SetActive(true);
         }
 
-        if (gemObjects.Count >= 3)
+        if (gemObjects.Count >= gemObjectives.Count)
         {
             objectiveCheckerItem.IsDone = true;
 

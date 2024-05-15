@@ -21,7 +21,9 @@ public class PasscodeController : MonoBehaviour
     [ConditionalField("isAnimatorComplete")][SerializeField] private Animator animatorComplete;
     [ConditionalField("isTimelineComplete")][SerializeField] private PlayableDirector timelineComplete;
     //[ConditionalField("isDialogueComplete")][SerializeField]
+    [SerializeField] private GameObject objectiveObj;
     [SerializeField] private Button passcodeCloseBtn;
+    [SerializeField] private Button passcodeEnterBtn;
 
     [Header("PUZZLE OBJECTS")]
     [SerializeField] private string passcodeCode;
@@ -43,6 +45,7 @@ public class PasscodeController : MonoBehaviour
             btn.interactable = true;
 
         passcodeCloseBtn.onClick.AddListener(() => TurnoffPasscode());
+        passcodeEnterBtn.onClick.AddListener(() => EnterCode());
         gameplayUIObj.SetActive(false);
         passcodeObj.SetActive(true);
         gameplaySceneController.DisableMouseLook();
@@ -73,6 +76,7 @@ public class PasscodeController : MonoBehaviour
         else
         {
             passcodeObj.SetActive(false);
+            gameplayUIObj.SetActive(true);
             gameplaySceneController.ActivateMouseLook();
 
             if (isAnimatorComplete)
@@ -81,12 +85,11 @@ public class PasscodeController : MonoBehaviour
             else if (isTimelineComplete)
                 timelineComplete.Play();
 
+            objectiveObj.SetActive(true);
+
             checkerItem.IsDone = true;
         }
     }
-
-    public void SetCodeOnPanel(string value) => passcodeTMP.text += value;
-    public void DeleteCodeOnPanel() => passcodeTMP.text = "";
 
     private void TurnoffPasscode()
     {
@@ -98,6 +101,7 @@ public class PasscodeController : MonoBehaviour
         passcodeTMP.text = "";
         gameplaySceneController.ActivateMouseLook();
         passcodeCloseBtn.onClick.RemoveAllListeners();
+        passcodeEnterBtn.onClick.RemoveAllListeners();
     }
 
     public void EnterCode()
