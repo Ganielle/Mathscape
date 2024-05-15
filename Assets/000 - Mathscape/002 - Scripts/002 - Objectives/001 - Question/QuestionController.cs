@@ -21,6 +21,8 @@ public class QuestionController : MonoBehaviour
     [ConditionalField("isTimelineEnd")][SerializeField] private PlayableDirector playables;
     [SerializeField] private bool isDialogueEnd;
     [ConditionalField("isDialogueEnd")][SerializeField] private DialogueController dialogue;
+    [SerializeField] private bool isReward;
+    [ConditionalField("isReward")] [SerializeField] private GameObject rewardObj;
 
     [Header("MAIN")]
     [SerializeField] private GameObject mainObj;
@@ -85,6 +87,9 @@ public class QuestionController : MonoBehaviour
 
             if (isAnimatorEnd)
                 animator.SetTrigger("open");
+
+            if (isReward)
+                rewardObj.SetActive(true);
 
             CloseQuestion();
 
