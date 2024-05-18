@@ -10,6 +10,9 @@ TagManager:
   - NoteItem
   - QuestionItem
   - Objective
+  - Coins
+  - Water
+  - End
   layers:
   - Default
   - TransparentFX

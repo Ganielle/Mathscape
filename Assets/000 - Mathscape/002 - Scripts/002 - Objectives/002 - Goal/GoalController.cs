@@ -17,7 +17,6 @@ public class GoalController : MonoBehaviour
 
     public void Initialize(List<int> values, Action endAction = null)
     {
-        Debug.Log(values.Count);
         if (values.Count <= 0)
         {
             dialogueController.Initialize();

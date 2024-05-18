@@ -13,12 +13,20 @@ public class GameplaySceneController : MonoBehaviour
 
     //  ==========================
 
+    [SerializeField] private QuestionDataController questionDataController;
+    [SerializeField] private SettingsController settingsController;
+    [SerializeField] private AudioClip bgMusic;
+
     [Header("DEBUGGER")]
     [ReadOnly] [SerializeField] private bool canMouseLook;
 
     private void Awake()
     {
+        GameManager.Instance.sceneController.AddActionLoadinList(settingsController.CheckVolumeOnStart());
+        GameManager.Instance.sceneController.AddActionLoadinList(questionDataController.GenerateQuestions());
+        GameManager.Instance.sceneController.ActionPass = true;
         CanMouseLook = true;
+        GameManager.Instance.SoundMnger.SetBGMusic(bgMusic);
     }
 
     public void ActivateMouseLook()
@@ -38,4 +46,6 @@ public class GameplaySceneController : MonoBehaviour
         Cursor.lockState = CursorLockMode.None;
 #endif
     }
+
+    public void ChangeScene(string sceneName) => GameManager.Instance.sceneController.CurrentScene = sceneName;
 }

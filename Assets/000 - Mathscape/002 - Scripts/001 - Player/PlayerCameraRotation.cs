@@ -22,6 +22,8 @@ public class PlayerCameraRotation : CinemachineExtension
     [ReadOnly] [SerializeField] private Vector2 deltaInput;
     [ReadOnly] [SerializeField] private Quaternion tempRotation;
 
+    private Dictionary<int, bool> touchOverUI = new Dictionary<int, bool>();
+
     protected override void PostPipelineStageCallback(CinemachineVirtualCameraBase vcam, CinemachineCore.Stage stage, ref CameraState state, float deltaTime)
     {
         if (!Application.isPlaying) return;
@@ -40,24 +42,33 @@ public class PlayerCameraRotation : CinemachineExtension
 
 #if UNITY_EDITOR
                 deltaInput = gameplayController.LookDirection;
-#else
-        foreach (var touch in Touchscreen.current.touches)
-            {
-                int touchId = touch.touchId.ReadValue();
-                if (touch.phase.ReadValue() == UnityEngine.InputSystem.TouchPhase.Began)
-                    touchOverUI[touchId] = IsTouchOverUI(touch.position);
 
-                if (touchOverUI.ContainsKey(touchId) && touchOverUI[touchId])
-                    continue;
-
-                deltaInput = touch.delta.ReadValue();
-            }
-#endif
                 startingRotation.x += deltaInput.x * verticalSpeed * Time.deltaTime;
                 startingRotation.y += deltaInput.y * horizontalSpeed * Time.deltaTime;
                 startingRotation.y = Mathf.Clamp(startingRotation.y, -clampAngle, clampAngle);
                 tempRotation = Quaternion.Euler(-startingRotation.y, startingRotation.x, 0f);
                 state.RawOrientation = Quaternion.Euler(-startingRotation.y, startingRotation.x, 0f);
+#else
+                        
+
+                foreach (var touch in Touchscreen.current.touches)
+                {
+                    int touchId = touch.touchId.ReadValue();
+                    if (touch.phase.ReadValue() == UnityEngine.InputSystem.TouchPhase.Began)
+                        touchOverUI[touchId] = IsTouchOverUI(touch.position);
+
+                    if (touchOverUI.ContainsKey(touchId) && touchOverUI[touchId])
+                        continue;
+
+                    deltaInput = touch.delta.ReadValue();
+
+                    startingRotation.x += deltaInput.x * verticalSpeed * Time.deltaTime;
+                    startingRotation.y += deltaInput.y * horizontalSpeed * Time.deltaTime;
+                    startingRotation.y = Mathf.Clamp(startingRotation.y, -clampAngle, clampAngle);
+                    tempRotation = Quaternion.Euler(-startingRotation.y, startingRotation.x, 0f);
+                    state.RawOrientation = Quaternion.Euler(-startingRotation.y, startingRotation.x, 0f);
+                }
+#endif
             }
         }
     }

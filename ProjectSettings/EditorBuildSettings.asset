@@ -6,6 +6,19 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 99c9720ab356a0642a771bea13969a05
+    path: Assets/000 - Mathscape/000 - Scenes/Persistent.unity
+    guid: 5991d487714cb064da120e4eafdcdb6c
+  - enabled: 1
+    path: Assets/000 - Mathscape/000 - Scenes/MainMenu.unity
+    guid: be7d5d33a7a72dd43aecd6bce643850d
+  - enabled: 1
+    path: Assets/000 - Mathscape/000 - Scenes/Stage1.unity
+    guid: bca300361bd0e2445abbed4022a5aae4
+  - enabled: 1
+    path: Assets/000 - Mathscape/000 - Scenes/Stage2.unity
+    guid: d81f044110b756e4a923380067c559b7
+  - enabled: 1
+    path: Assets/000 - Mathscape/000 - Scenes/Stage3.unity
+    guid: 8ea83a7ef44ff8c45aea5cb829fc9bd7
   m_configObjects: {}
+  m_UseUCBPForAssetBundles: 0

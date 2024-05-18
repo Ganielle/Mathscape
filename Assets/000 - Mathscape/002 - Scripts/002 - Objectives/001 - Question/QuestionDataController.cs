@@ -10,6 +10,7 @@ public class QuestionDataController : MonoBehaviour
 
     //  ===========================
 
+    [SerializeField] private PlayerData playerData;
     [SerializeField] private List<QuestionData> easyQuestions;
     [SerializeField] private List<QuestionData> mediumQuestions;
     [SerializeField] private List<QuestionData> hardQuesitons;
@@ -17,14 +18,9 @@ public class QuestionDataController : MonoBehaviour
     [Header("DEBUGGER")]
     [ReadOnly][SerializeField] private List<QuestionData> tempQuestions;
 
-    private void Awake()
-    {
-        StartCoroutine(GenerateQuestions());
-    }
-
     public IEnumerator GenerateQuestions(Action action = null)
     {
-        tempQuestions = easyQuestions;
+        tempQuestions = playerData.CurrentDifficulty == (PlayerData.Difficulty) 0 ? easyQuestions : playerData.CurrentDifficulty == (PlayerData.Difficulty)1 ? mediumQuestions : playerData.CurrentDifficulty == (PlayerData.Difficulty)2 ? hardQuesitons : hardQuesitons;
 
         yield return StartCoroutine(Shuffler.Shuffle(tempQuestions));
 

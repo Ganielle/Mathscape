@@ -1,4 +1,5 @@
 using MyBox;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -29,11 +30,13 @@ public class DialogueController : MonoBehaviour
     //  =========================
 
     Coroutine showText;
+    Action finalAction;
 
     //  =========================
 
-    public void Initialize()
+    public void Initialize(Action finalAction = null)
     {
+        this.finalAction = finalAction;
         nextBtn.onClick.AddListener(() => NextDialogueBtn());
         gameplayUIObj.SetActive(false);
         dialogueObj.SetActive(true);
@@ -78,7 +81,11 @@ public class DialogueController : MonoBehaviour
         if (currentDialogueIndex >= dialogueSequence.Count - 1)
         {
             dialogueObj.SetActive(false);
-            gameplayUIObj.SetActive(true);
+
+            finalAction?.Invoke();
+            if (finalAction == null)
+                gameplayUIObj.SetActive(true);
+
             characterNameTMP.text = "";
             dialogueTMP.text = "";
             nextBtn.onClick.RemoveAllListeners();
